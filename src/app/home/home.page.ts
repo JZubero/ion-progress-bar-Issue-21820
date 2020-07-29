@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  private timer;
+
+  value = 0;
+
+  ionViewDidEnter() {
+    this.timer = setInterval(() => {
+      this.value = Math.random();
+    }, 100);
+  }
 
 }
